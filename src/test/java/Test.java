@@ -11,7 +11,7 @@ import ru.netology.sender.MessageSenderImpl;
 import java.util.HashMap;
 import java.util.Map;
 
-class Test {
+class TestMessageSender {
 
     @org.junit.jupiter.api.Test
     void testMessageSenderUSA() {
@@ -36,7 +36,9 @@ class Test {
         MessageSenderImpl messageSender = new MessageSenderImpl(geoService, localizationService);
         Assertions.assertEquals("Добро пожаловать", messageSender.send(headers));
     }
+}
 
+class TestGeoService {
     @org.junit.jupiter.api.Test
     void testGeoService() {
         GeoServiceImpl geoService = new GeoServiceImpl();
@@ -44,7 +46,8 @@ class Test {
         Location locationGeo = geoService.byIp("96.44.183.149");
         Assertions.assertEquals(location.getCity(), locationGeo.getCity());
     }
-
+}
+class TestLocalizationService {
     @org.junit.jupiter.api.Test
     void testLocalizationService() {
         LocalizationServiceImpl localizationService = new LocalizationServiceImpl();
