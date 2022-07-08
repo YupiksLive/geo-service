@@ -1,4 +1,4 @@
-package geo;
+package ru.netology.geo;
 
 import org.junit.jupiter.api.Assertions;
 import ru.netology.entity.Country;
